@@ -12,6 +12,7 @@ The aim of this project is to train a model using a dataset to analyze patterns 
 
 * CA3MachineLearning -> Contains the .tex files and .bib files for our research paper
 * CA3MachineLearning.pdf -> PDF generated from .tex files
+* wdbcwh.csv -> csv of full dataset with headers
 
 
 ## About this project
