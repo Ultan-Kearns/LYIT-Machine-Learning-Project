@@ -8,9 +8,8 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{geometry}
-
-\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
-    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\usepackage{biblatex} %Imports biblatex package
+\addbibresource{references.bib}
 \begin{document}
 \title{
 A Study Into The Applications of Machine Learning in The Prognostication of Breast Cancer\\
@@ -30,20 +29,42 @@ A Study Into The Applications of Machine Learning in The Prognostication of Brea
 \end{abstract}
 
 \section{Introduction}
-Machine Learning is a field which aims to train machines to think and learn like humans.  This is done by feeding data into the machine, the machine then analyzes the data and begins to start noticing patterns within the data so that when new data is used the machine can easily detect certain characteristics about the data and classify it.  There are many ways which a machine may choose to learn we will explain the types of learning we used when trying this model in the upcoming sections.  
-\subsection{Explain about breast cancer \& prognosis cite statistics}
-\subsection{Introduction to machine learning methods and what machine learning is}
-\subsection{talk about expert systems?}
+Machine Learning is a field which aims to train machines to think and learn like humans.  This is done by feeding data into the machine, the machine then analyzes the data and begins to start noticing patterns within the data and starts to create a model, this model can be used to train the machine so that when new data is feed in the machine can easily detect certain characteristics about the data and classify it.  Machine Learning is a subset of AI which is comprised of many fields, and has been proven to perform very well in predicting outcomes in a large variety of areas such as STEM fields, Economics, Social Sciences and various others.  The ultimate goal of machine learning is to train a machine to perform a task without any human intervention and to learn to adapt to new data and new patterns which appear in the data.  There has been an increased reliance on machine learning in the past few years and it has become ubiquitous in the modern world.\\
+
+There are many ways which a machine may choose to learn we will explain the types of learning we used when trying this model in the upcoming sections.  
+\subsection{Breast Cancer}
+Breast cancer is a type of cancer which forms in the breast tissue, it has many signs and symptoms such as: 
+\begin{itemize}
+    \item New lump in the breast or underarm (armpit).
+    \item Thickening or swelling of part of the breast.
+    \item Irritation or dimpling of breast skin.
+    \item Redness or flaky skin in the nipple area or the breast.
+    \item Pulling in of the nipple or pain in the nipple area.
+    \item Nipple discharge other than breast milk, including blood.
+    \item Any change in the size or the shape of the breast.
+    \item Pain in any area of the breast.
+\end{itemize} \cite{symptomsofbreastcancer}
+\\
+\\
+Breast cancer is also one of the most common occurring cancers in women and the average risk of a woman developing cancer in her lifetime is about 13\% or 1/8 in the United States alone\cite{howcommonisbreastcancer} and in 2020 there were 2.3 million women diagnosed with the disease of which 685,000 succumbed to the disease\cite{breastcancerstatistics}.  Breast cancer treatment is has a very high survival rate if caught early, the survival rate for those in high income countries was 90\% \cite{breastcancerstatistics}.
+\subsection{Aims of the project}
+ The aim of this project is to train a model using machine learning to analyze data from both benign and malignant tumours to detect patterns in the data and to predict whether tumours will be malignant or benign given certain parameters with reasonable accuracy.
 \subsection{Discuss various uses of machine learning in medicine today}
 \section{Methodology}
 \subsection{Describe what we did}
 \subsection{Describe algorithms and methods we used}
 \subsection{Talk about the }
+\section{Challenges}
+\subsection{Over fitting}
+\subsection{Under fitting}
+\subsection{Outliers}
 \section{Applications}
 \subsection{discuss future of ML in healthcare}
 \subsection{Talk about applications of our model}
 \subsection{Talk about various improvements which may be made in future}
 \section{Conclusion}
-\bibliography{references}
+\newpage
+\clearpage
+\printbibliography
 
 \end{document}
