@@ -1,6 +1,6 @@
 # LYIT-Machine-Learning-Project
 
-## CA 2 Machine Learning Project
+## CA 3 Machine Learning Project
 
 ### Authors: Ultan Kearns & Liam Millar
 
