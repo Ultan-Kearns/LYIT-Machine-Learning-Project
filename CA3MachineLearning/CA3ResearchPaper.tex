@@ -104,9 +104,9 @@ Additionally we produced a heat-map of the correlations.
 \end{figure}
 \subsection{Algorithms}
 \subsubsection{Linear Regression}
-In the notebook we used linear regression to predict values from our X and Y testsets based on features in our training sets.  We decided to use  Area Severity  and Smoothness Severity as an example of our negatively skewed linear regression model.  Our dependent variable was the Area Severity and our independent variable was the Smoothness Severity.   We trained the model by first creating our X training set and test set which contained the Area Severity feature then we created our y training and testing set by using the Smoothness Severity, we then reshaped the training and test data into a 2d array containing our feature values.  We then fit a model to display our results as we can see in the image below the relation between Smoothness Severity and Area Severity is negatively correlated.
+In the notebook we used linear regression to predict values from our X and Y testsets based on features in our training sets.  We decided to use  Mean Radius  and Mean Fractal Dimension as an example of our negatively skewed linear regression model.  Our dependent variable was the Mean Radius and our independent variable was the Mean Fractal Dimension.   We trained the model by first creating our X training set and test set which contained the Mean Radius feature then we created our y training and testing set by using the Mean Fractal Dimension, we then reshaped the training and test data into a 2d array containing our feature values.  We then fit a model to display our results as we can see in the image below the relation between Smoothness Severity and Mean Radius is negatively correlated.
 \begin{figure}[H]
-\caption{Linear Regression Model of Smoothness Severity and Area Severity.}
+\caption{Linear Regression Model of Mean Fractal and Mean Radius.}
 \centering
 \includegraphics[height=60mm,width=0.5\textwidth]{Images/negatively_skewed_linear_regression.png}
 \end{figure}
@@ -134,17 +134,30 @@ Over fitting occurs when the model is performing very well on the training data 
 When training the models we also had to worry about underfitting the data, underfitting occurs when the model does not predict well enough on either the training or test sets.  Such a model is not practical and has no purpose or uses.
 \section{Applications}
 \subsection{Diagnosis of Breast Cancer}
+The KNN model has a fairly accurate prediction of the diagnosis as does our first Naive Bayes model, as with all diagnostics tools there will need to be a doctor on hand also to analyze the information in case the AI generates false negatives or false positives.  The models do provide however an insight into whether a tumour is benign or malignant.
 \subsection{Prognosis of Breast Cancer}
+The models can predict whether a tumour will be malignant or benign from features in our dataset this means that doctors can feed in the values of said features and produce a prognosis indicating the possibility of the tumour being benign or malignant.
 \section{Conclusion}
 \subsection{Accuracy of Models}
-\subsubsection{Linear Regression}
 \subsubsection{Naive Bayes}
+We defined two Naive Bayes models for our paper the first predicted very accurately and was given more features we achieved perfect scores with all of our testsets which indicated the model was possibly overfitted.  We then decided to make a second model with less features this model suffered greatly generally only predicting one value for all training / testsets this is due to underfitting the model.
 \subsubsection{KNN}
-
+The KNN model predicts fairly accurately when the training / test split is 0.5, below I will include the correctly predicted values out of the actual values.
+\\
+X\_test: Total values:  285  correctly predicted values:  259 or 90\%
+\\
+X\_train:  Total values:  284  correctly predicted values:  272 or 95\%
+\\
+y\_test: Total values:  285  correctly predicted values:  263 or 92\%
+\\
+y\_train: Total values:  284  correctly predicted values:  273 or 96\%
+\\
+From the above results we can see that this technique works very well with our dataset with around 9 / 10 predictions being accurate. 
 \subsection{What could be done differently}
 Our dataset was quite small which would lead to some concerns about over fitting for the training data especially for the likes of decision tree. We took steps to alleviate some of the concerns about this. For the purpose of our exercise this was fine but ideally an expanded set of real world data points for training would ensure a more confident outcome.
 \newpage
 \clearpage
+\tableofcontents
 \printbibliography
 \listoffigures
 \end{document}
